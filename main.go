@@ -82,7 +82,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	}
 
 	username := r.FormValue("username")
-	user := User{
+	user := &User{
 		Username:      username,
 		Authenticated: true,
 	}
